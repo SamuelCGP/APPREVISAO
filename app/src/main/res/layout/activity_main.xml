@@ -28,7 +28,8 @@
         android:layout_gravity="center_horizontal"
         android:hint="primeiro número"
         android:minHeight="48dp"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:inputType="number"/>
 
     <EditText
         android:id="@+id/editText2"
@@ -37,7 +38,8 @@
         android:layout_gravity="center_horizontal"
         android:hint="segundo número"
         android:minHeight="48dp"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:inputType="number"/>
 
     <Button
         android:id="@+id/button"

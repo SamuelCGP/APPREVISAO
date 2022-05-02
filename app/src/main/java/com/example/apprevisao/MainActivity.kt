@@ -22,11 +22,11 @@ class MainActivity : AppCompatActivity() {
 
         if(!editText1.isNullOrEmpty() && !editText2.isNullOrEmpty()) {
             if (value1 == value2) {
-                result = "Campo 1 é igual ao Campo 2";
+                result = value1.toString() + " é igual a " + value2.toString();
             } else if (value1 > value2){
-                result = "Campo 1 é maior que o Campo 2";
+                result = value1.toString() + " é maior que " + value2.toString();
             } else{
-                result = "Campo 1 é menor que o Campo 2";
+                result = value1.toString() + " é menor que " + value2.toString();
             }
         }
         
