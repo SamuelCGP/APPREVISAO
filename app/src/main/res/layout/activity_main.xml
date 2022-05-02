@@ -29,7 +29,7 @@
         android:hint="primeiro número"
         android:minHeight="48dp"
         android:textAlignment="center"
-        android:inputType="number"/>
+        android:inputType="number" />
 
     <EditText
         android:id="@+id/editText2"
