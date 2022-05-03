@@ -14,14 +14,14 @@ class MainActivity : AppCompatActivity() {
     }
     public fun compare(view: View) {
         var textView = findViewById<TextView>(R.id.textView1);
+        var editText1 = findViewById<EditText>(R.id.editText1);
+        var editText2 = findViewById<EditText>(R.id.editText2);
         var result = "Preencha os campos";
 
-        if(!findViewById<EditText>(R.id.editText1).text.isNullOrEmpty() && !findViewById<EditText>(R.id.editText2).text.isNullOrEmpty()) {
-            var editText1 = findViewById<EditText>(R.id.editText1).text;
-            var editText2 = findViewById<EditText>(R.id.editText2).text;
+        if(!editText1.text.isNullOrEmpty() && !editText2.text.isNullOrEmpty()) {
 
-            var value1 = Integer.parseInt(findViewById<EditText>(R.id.editText1).text.toString());
-            var value2 = Integer.parseInt(findViewById<EditText>(R.id.editText2).text.toString());
+            var value1 = Integer.parseInt(editText1.text.toString());
+            var value2 = Integer.parseInt(editText2.text.toString());
 
             if (value1 == value2) {
                 result = value1.toString() + " é igual a " + value2.toString();
@@ -31,14 +31,14 @@ class MainActivity : AppCompatActivity() {
                 result = value1.toString() + " é menor que " + value2.toString();
             }
 
-            findViewById<EditText>(R.id.editText1).setBackgroundColor(ContextCompat.getColor(this, R.color.white))
-            findViewById<EditText>(R.id.editText2).setBackgroundColor(ContextCompat.getColor(this, R.color.white))
+            editText1.setBackgroundColor(ContextCompat.getColor(this, R.color.white))
+            editText2.setBackgroundColor(ContextCompat.getColor(this, R.color.white))
         }else{
-            if(findViewById<EditText>(R.id.editText1).text.isNullOrEmpty()){
-                findViewById<EditText>(R.id.editText1).setBackgroundColor(ContextCompat.getColor(this, R.color.purple_200))
+            if(editText1.text.isNullOrEmpty()){
+                editText1.setBackgroundColor(ContextCompat.getColor(this, R.color.purple_200))
             }
-            if(findViewById<EditText>(R.id.editText2).text.isNullOrEmpty()){
-                findViewById<EditText>(R.id.editText2).setBackgroundColor(ContextCompat.getColor(this, R.color.purple_200))
+            if(editText2.text.isNullOrEmpty()){
+                editText2.setBackgroundColor(ContextCompat.getColor(this, R.color.purple_200))
             }
         }
         
